@@ -1,0 +1,13 @@
+<div class="container-fluid" *ngIf='receivedData.length > 0; else notReceived'>
+  <div class="alert alert-primary" *ngFor='let data of receivedData; let i = index' [id]="i">
+    <h1 class="alert-heading">{{data.title}}</h1>
+    <p class="text-muted">{{data.body}}</p>
+    <button class="btn btn-outline-danger" (click)='deleteNote(i)'>Delete</button>
+  </div>
+</div>
+<ng-template #notReceived>
+  <div class="alert alert-danger">
+    <h1 class="alert-heading">No notes added</h1>
+    <p class="text-muted">Notes added will appear here</p>
+  </div>
+</ng-template>

@@ -1,0 +1,7 @@
+<form>
+  <div class="form-group">
+    <input type="text" name="title" class='form-control' [(ngModel)]='title'>
+    <textarea id="getText" cols="30" rows="10" class='form-control' [(ngModel)]='body' name='body'></textarea>
+    <button class="btn btn-outline-primary" type="submit" [disabled]="!(title && body)? true: false" (click)='writeData()'>Push</button>
+  </div>
+</form>
