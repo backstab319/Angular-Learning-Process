@@ -1,0 +1,9 @@
+<app-header (showComponent)="getComponentName($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf='componentName == "recipe"'></app-recipes>
+      <app-shopping-list *ngIf='componentName == "shopping"'></app-shopping-list>
+    </div>
+  </div>
+</div>
